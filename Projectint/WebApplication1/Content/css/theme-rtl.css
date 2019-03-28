@@ -1,0 +1,59 @@
+
+
+.conner-style .navbar-brand:before {
+  left: auto;
+  right: -80%;
+}
+
+.dropdown-buttons .btn-group .btn {
+  border-right: none;
+  border-left: 1px solid #2780e3;
+}
+.dropdown-buttons .btn-group:last-child .btn {
+    border-left: none;
+    margin-right: 15px;
+}
+
+.slide-text {
+  text-align: right;
+}
+.indicators-line > .carousel-indicators {
+  right: 80%;
+}
+.carousel-control {
+  right: auto;
+}
+.team-content-icon {
+  left: 20px;
+  right: auto;
+}
+.team-content {
+  text-align: right;
+}
+.service-item.style-1 .content {
+  padding-right: 1em;
+  padding-left: auto;
+}
+.border-right {
+  border-left: 1px solid #fff;
+  border-right: none;
+}
+.footer-item .border-style-2:after,
+.footer-item .border-style-1:before,
+.footer-item .border-style-1:after  {
+  left: auto;
+  right: 2px;
+}
+
+.welcome-text .border-style-2::after.border-center {
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+  text-align: center;
+}
+
+.rtl-section .border-style-2:after {
+  left: auto;
+  right: 2px;
+
+}

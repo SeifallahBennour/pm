@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.Title = "ListP";
+    Layout = null;
+}
+
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/ContentDashboard/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="~/ContentDashboard/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="~/ContentDashboard/assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+</head>
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    </li>
+                    <li class="menu-title">Autres Informations</li><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Charts (par jour)</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="@Url.Action("NbrPTPJ", "Analytics")">Nombre de visiteurs</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="@Url.Action("TauxRA", "Analytics")">Taux d'annulation</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="@Url.Action("TauxRVpj", "Analytics")">Taux de remplissage des vacations</a></li>
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="@Url.Action("ChAfpj", "Analytics")">Revenue</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Charts (par période)</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="@Url.Action("NbrTPT", "Analytics")">Nombre de visiteurs</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="@Url.Action("TauxRAT", "Analytics")">Taux d'annulation</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="@Url.Action("TauxRVT", "Analytics")">Taux de remplissage des vacations</a></li>
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="@Url.Action("ChAfT", "Analytics")">Revenue</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="@Url.Action("ListP", "Analytics")">Liste des patients</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">Revenus</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-title">Extras</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Register</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- Left Panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <div class="breadcrumbs">
+            <div class="breadcrumbs-inner">
+                <div class="row m-0">
+                    <div class="col-sm-4">
+                        <div class="page-header float-left">
+                            <div class="page-title">
+                                <h1>Dashboard</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="page-header float-right">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#">Table</a></li>
+                                    <li class="active">Data table</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Data Table</strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="example" class="display nowrap" style="width:80%">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Prénom</th>
+                                            <th>N° de téléphone</th>
+                                            <th>Email</th>
+                                            <th>Sexe</th>
+                                            <th>Age</th>
+                                            <th>Nombre de visites</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       @foreach (var person in ViewBag.ListP)
+                                       {
+                                        <tr>
+                                            <td>@person.firstName</td>
+                                            <td>@person.lastName</td>
+                                            <td>@person.phoneNumber</td>
+                                            <td>@person.email</td>
+                                            <td>@person.gender</td>
+                                            <td>@person.age</td>
+                                            <td>@person.nbr</td>
+                                        </tr>
+
+                                       }
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+        <div class="clearfix"></div>
+
+    </div><!-- /#right-panel -->
+    <!-- Right Panel -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/main.js"></script>
+
+    <script src="~/ContentDashboard/assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="~/ContentDashboard/assets/js/init/datatables-init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#bootstrap-data-table-export').DataTable();
+      } );
+    </script>
+    
+    <script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excelHtml5',
+            'pdfHtml5'
+        ]
+    } );
+} );
+    </script>
+</body>
+</html>
+           
+
+
+
+      
+
+

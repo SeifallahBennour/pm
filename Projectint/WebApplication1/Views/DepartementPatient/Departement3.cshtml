@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Departement3";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+<section class="inner-bg over-layer-black" style="background-image: url('~/Content/img/bg/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="depertment-col">
+                        <div class="depertment-list">
+                            <a href="@Url.Action("Departement", "DepartementPatient")"><i class="flaticon-heart"></i> Chirurgie Depertement</a>
+                            <a href="@Url.Action("Departement2", "DepartementPatient")"><i class="flaticon-broken-bone"></i> Radiothérapie Depertement</a>
+                            <a href="@Url.Action("Departement3", "DepartementPatient")"><i class="flaticon-stomach-1"></i> Hématologie Depertement</a>
+                            <a href="@Url.Action("Departement4", "DepartementPatient")"><i class="flaticon-brain"></i> Anesthésiologie Depertement</a>
+                            <a href="@Url.Action("Departement5", "DepartementPatient")"><i class="flaticon-spine-bone"></i> Pédiatrie Depertement</a>
+                            <a href="@Url.Action("Departement6", "DepartementPatient")"><i class="flaticon-virus"></i> Dentaire Depertement</a>
+                            <a href="@Url.Action("Departement7", "DepartementPatient")"><i class="flaticon-kidney"></i> Dermatology Depertement</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <img src="@Url.Content("~/Content/img/depertment/hématologie.jpg") ">
+                    <h3 class="margin-top-30"> Hématologie Depertement</h3>
+                    <p>
+                        L’hématologie est la branche de la médecine qui étudie le sang et ses maladies (ou hémopathies). Elle étudie plus particulièrement les cellules sanguines dont l'origine est hématopoïétique (synthèse de ces cellules dans la moelle osseuse) et qui ont un rôle pour l'oxygénation, l'immunité et la coagulation, et étudie également certaines molécules plasmatiques que sont les facteurs de coagulation
+                    </p>
+                    <div class="col-md-6">
+                    </div><div class="col-md-6">
+                        <a href="@Url.Action("hematologie", "DepartementPatient")" class="btn btn-simple">Voir Docteurs</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

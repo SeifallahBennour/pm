@@ -1,0 +1,115 @@
+﻿
+@*@model WebApplication1.Models.RegisterViewModel
+@{
+    ViewBag.Title = "inscription";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+<section class="inner-bg over-layer-black" style="background-image: url('~/Content/img/bg/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Container start -->
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <br />
+    <br />
+    
+    <div class="container">
+        <h4> Inscription </h4>
+        <div class="col justify-content-md-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="login-screen">
+                    <div class="login-box">
+
+                        <div class="row gutters">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.FirstName, new { placeholder = " Nom", @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.LastName, new { placeholder = " Prenom", @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Email, new { placeholder = " Email", @class = "form-control" })
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.CIN, new { placeholder = " Numéro carte identité", @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = " Numéro de téléphone", @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.address, new { placeholder = "Adresse", @class = "form-control" })
+                                </div>
+                            </div>
+                           
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    @Html.PasswordFor(m => m.Password, new { placeholder = " Password", @class = "form-control" })
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12" >
+                                <div class="form-group">
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = " confirm Password", @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                @Html.RadioButtonFor(m => m.Gender, "Femme", new { @class = "radio-inline" })@Html.Label("Femme")
+                            </div>
+                            <div class="form-group">
+                                @Html.RadioButtonFor(m => m.Gender, "Homme", new { @class = "radio-inline" })@Html.Label("Homme")
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6" >
+                            <select class="form-control" id="role" name="doctorName" required="" >
+                                
+                                <option value="Patient">Patient</option>
+                                <option value="Docteur">Docteur</option>
+                               
+
+                            </select>
+                        </div>
+                        <div class="actions clearfix">
+                            <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                        </div>
+                       
+                       
+                        <a href="@Url.Action("SingIn", "Home")" class="additional-link">Have an Account? <span>Login Now</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+<!-- Container end -->*@
+
+

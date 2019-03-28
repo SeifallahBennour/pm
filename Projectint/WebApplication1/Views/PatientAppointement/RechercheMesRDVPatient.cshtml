@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApplication1.Models.Entities.Doctor>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+<section class="inner-bg" style="background-color:#04465F">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<div align="center">
+    <h3> Trouver votre docteur </h3>
+</div>
+<br />
+<br />
+@using (Html.BeginForm())
+{ <table>
+        <tr>
+            <td>
+                <div>
+                    specialite: @Html.TextBox("searchStringspecialite")
+                    ville :   @Html.TextBox("searchStringville")
+                </div>
+            </td>
+            <td> <input type="submit" value="Search" id="submit" /> </td>
+        </tr>
+    </table> }
+<br />
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+
+            <td>
+                <a href="@Url.Action("Create", "PatientAppointement")" class="btn btn-simple">Prendre rendez vous </a>
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

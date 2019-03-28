@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Departement7";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+
+<section class="inner-bg over-layer-black" style="background-image: url('~/Content/img/bg/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="depertment-col">
+                        <div class="depertment-list">
+                            <a href="@Url.Action("Departement", "DepartementPatient2")"><i class="flaticon-heart"></i> Chirurgie Depertement</a>
+                            <a href="@Url.Action("Departement2", "DepartementPatient2")"><i class="flaticon-broken-bone"></i> Radiothérapie Depertement</a>
+                            <a href="@Url.Action("Departement3", "DepartementPatient2")"><i class="flaticon-stomach-1"></i> Hématologie Depertement</a>
+                            <a href="@Url.Action("Departement4", "DepartementPatient2")"><i class="flaticon-brain"></i> Anesthésiologie Depertement</a>
+                            <a href="@Url.Action("Departement5", "DepartementPatient2")"><i class="flaticon-spine-bone"></i> Pédiatrie Depertement</a>
+                            <a href="@Url.Action("Departement6", "DepartementPatient2")"><i class="flaticon-virus"></i> Dentaire Depertement</a>
+                            <a href="@Url.Action("Departement7", "DepartementPatient2")"><i class="flaticon-kidney"></i> Dermatology Depertement</a>
+    
+                         </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <img src="@Url.Content("~/Content/img/depertment/derma.jpg") ">
+                    <h3 class="margin-top-30">dermatology Depertment</h3>
+                    <p>
+                        La dermatologie est la branche de la médecine qui s'occupe de la peau, des muqueuses et des phanères (ongles, cheveux, poils) <br />
+                        Elle est associée traditionnellement à la vénérologie, c’est-à-dire l'étude des maladies vénériennes ou infections sexuellement transmissibles (IST). <br />
+                        Le médecin spécialisé pratiquant la dermatologie s'appelle le dermatologue3.<br />
+
+
+                        La peau se compose de plusieurs couches superposées (de la plus profonde à la plus en surface) incluant hypoderme, derme (dermes réticulaire, profond et papillaire), membrane basale et épiderme (Stratum germinativum, granulosum, spinosum, lucidum et corneum).
+                    </p>                    <div class="col-md-6">
+                    </div><div class="col-md-6">
+                        <a href="@Url.Action("dermatology", "DepartementPatient2")" class="btn btn-simple">Voir Docteurs</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

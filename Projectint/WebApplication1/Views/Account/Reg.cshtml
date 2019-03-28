@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Reg";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+
+
+<h2>Inscription</h2>
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+                            <hr />
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+<div class="container">
+    <form action="http://bootstrap.gallery/Bluemoon-v4.0.1/main-demo-bs4/index.html">
+        <div class="row justify-content-md-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="login-screen">
+                    <div class="login-box">
+                        <a href="#" class="login-logo">
+                            <img src="img/logo-dark.png" alt="Bluemoon Admin Dashboard" />
+                        </a>
+
+
+                            <div class="row gutters">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email ID" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="actions clearfix">
+                                <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                            </div>
+                            <div class="or">
+                                <span>or signup using</span>
+                            </div>
+                            <div class="row gutters">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <button type="submit" class="btn btn-tw btn-block">Twitter</button>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <button type="submit" class="btn btn-fb btn-block">Facebook</button>
+                                </div>
+                            </div>
+                            <a href="login.html" class="additional-link">Have an Account? <span>Login Now</span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

@@ -1,0 +1,1 @@
+var chart10=c3.generate({bindto:"#donutChart",data:{columns:[["Likes",12],["Shares",87],["Clicks",51]],type:"donut",colors:{Likes:"#219ee6",Shares:"#46b7f9",Clicks:"#75ccff"},onclick:function(a,b){console.log("onclick",a,b)},onmouseover:function(a,b){console.log("onmouseover",a,b)},onmouseout:function(a,b){console.log("onmouseout",a,b)}},donut:{title:"Clicks"}});

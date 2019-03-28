@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using WebApplication1.Models
+@model LoginViewModel
+
+
+
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from bootstrap.gallery/Bluemoon-v4.0.1/main-demo-bs4/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Nov 2018 21:57:43 GMT -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Bluemoon Admin Panel" />
+    <meta name="keywords" content="Login, Bluemoon Login, Admin, Admin Dashboard, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="~/Content/img/Image1.png" />
+    <title>Login</title>
+
+    <!--
+        **********************
+        **********************
+        Common CSS files
+        **********************
+        **********************
+    -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content2/css/bootstrap.min.css" />
+    <!-- Icomoon Icons CSS -->
+    <link rel="stylesheet" href="~/Content2/fonts/icomoon/icomoon.css" />
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="~/Content2/css/main.css" />
+</head>
+<body class="login-bg">
+
+    <!-- Container start -->
+    <div class="container">
+
+       @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+       {
+        @Html.AntiForgeryToken()
+        
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row justify-content-md-center">
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                    <div class="login-screen">
+                        <div class="login-box">
+                            <div align="center">
+                                <a href="#" class="login-logo">
+                                    <img src="~/Content/img/Image1.png" alt="Bluemoon Admin Dashboard" />
+                                </a>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+
+                            </div>
+                            <div class="form-group">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+
+
+                            </div>
+                            <div class="actions">
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </div>
+                            <a href="/Home" class="additional-link">tu ne posséde pas de compte ? <span>s'inscrire</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       }
+    </div>
+    <!-- Container end -->
+</body>
+<!-- Mirrored from bootstrap.gallery/Bluemoon-v4.0.1/main-demo-bs4/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Nov 2018 21:57:43 GMT -->
+</html>

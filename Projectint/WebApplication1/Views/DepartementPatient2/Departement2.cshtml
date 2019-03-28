@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Departement2";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+<section class="inner-bg over-layer-black" style="background-image: url('~/Content/img/bg/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="depertment-col">
+                        <div class="depertment-list">
+                            <a href="@Url.Action("Departement", "DepartementPatient2")"><i class="flaticon-heart"></i> Chirurgie Depertement</a>
+                            <a href="@Url.Action("Departement2", "DepartementPatient2")"><i class="flaticon-broken-bone"></i> Radiothérapie Depertement</a>
+                            <a href="@Url.Action("Departement3", "DepartementPatient2")"><i class="flaticon-stomach-1"></i> Hématologie Depertement</a>
+                            <a href="@Url.Action("Departement4", "DepartementPatient2")"><i class="flaticon-brain"></i> Anesthésiologie Depertement</a>
+                            <a href="@Url.Action("Departement5", "DepartementPatient2")"><i class="flaticon-spine-bone"></i> Pédiatrie Depertement</a>
+                            <a href="@Url.Action("Departement6", "DepartementPatient2")"><i class="flaticon-virus"></i> Dentaire Depertement</a>
+                            <a href="@Url.Action("Departement7", "DepartementPatient2")"><i class="flaticon-kidney"></i> Dermatology Depertement</a>
+          </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+
+                    <img src="@Url.Content("/Content/img/depertment/1.jpg") ">
+                    <h3 class="margin-top-30"> Radiothérapie Depertement</h3>
+                    <p>
+                        La radiothérapie est une méthode de traitement locorégional des cancers, utilisant des radiations pour détruire les cellules cancéreuses en bloquant leur capacité à se multiplier. L'irradiation a pour but de détruire toutes les cellules tumorales tout en épargnant les tissus sains périphériques.
+
+                        La radiothérapie est utilisée chez plus de la moitié des patients ayant un cancer. Elle est, avec la chirurgie, le traitement le plus fréquent des cancers et peut entraîner une rémission nette à elle seule. Elle peut être utilisée seule ou associée à la chirurgie et à la chimiothérapie. Ses indications sont liées au type de la tumeur, à sa localisation, à son stade et à l'état général du patient. Elle peut être faite en ambulatoire, c’est-à-dire sans hospitalisation, car les séances sont de courte durée et les effets secondaires moindres que lors d'une chimiothérapie, hormis chez certains patients victimes d'une hypersensibilité individuelle aux rayonnements ionisants, hypersensibilité qui devrait bientôt pouvoir être diagnostiquée par des « tests de dépistage d'effets indésirables potentiels de la radiothérapie »1. Des tests sont également attendus pour diagnostiquer une plus grande susceptibilité que la moyenne aux cancers radio-induits
+                    </p>
+                    <div class="col-md-6">
+                    </div><div class="col-md-6">
+                        <a href="@Url.Action("radio", "DepartementPatient2")" class="btn btn-simple">Voir Docteurs</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

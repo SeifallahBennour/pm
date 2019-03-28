@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+<section class="inner-bg" style="background-color:#04465F">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmation</title>
+</head>
+<body>
+    <div class="col-md-6">
+        <br />
+        <br />
+        <br />
+        
+        <div class="shop-list-single shop-product-item-area">
+            <div class="shop-list-left-content">
+                <a href="#"><img src="img/shop/s5.jpg" alt=""></a>
+                <span class="shop-cart-icon">
+                    <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                </span>
+            </div>
+            <div class="shop-list-right-content">
+                <div class="product-content">
+                    <h1><a href="#"> 
+                        Merci de confirmer votre rendez vous </a></h1>
+                    
+                </div>
+                <div class="product-details">
+
+
+                    
+                     </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a href="@Url.Action("mail","PatientAppointement")" class="btn btn-simple">Confirmer Rendez_vous</a>
+          </div>
+        <br />
+        <div class="col-md-6">
+
+            <a href="@Url.Action("AnnulerAppointment","PatientAppointement")" class="btn btn-danger">Annuler Rendez_vous</a>
+        </div>
+
+        </div>
+    <div class="col-md-6">
+        <br />
+        <br />
+        <img src="~/Content/img/bg/1.jpg" />
+    </div>
+</body>
+</html>

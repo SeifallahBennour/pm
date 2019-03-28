@@ -1,0 +1,304 @@
+﻿@model WebApplication1.Models.Entities.allahmed
+
+
+@{
+    ViewBag.Title = "DoctorProfile";
+    Layout = "~/Views/Layout/LayoutDoctor.cshtml";
+}
+
+
+<section class="inner-bg" style="background-color:#04465F">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
+    @*if (annyang) {
+        var commands = {
+            'open calendar': function () {
+                console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
+                window.location = "@Url.Action("Calender", "Calender")";
+            }
+        };
+        annyang.addCallback('result', function(userSaid, commandText, phrases) {
+            console.log(userSaid); // sample output: 'hello'
+            console.log(commandText); // sample output: 'hello (there)'
+            console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+            if(userSaid[0]!= " okay") {
+                console.log(userSaid[0]);
+                console.log(userSaid[0]!== 'okay');
+                // document.getElementById('form_description').value = userSaid[0];
+            }
+        });
+        annyang.addCommands(commands);
+        annyang.start();
+    });*@
+
+
+
+
+
+</script>
+
+
+
+<script>
+        if (annyang) {
+            var commands = {
+                'open calender': function() {  window.location = "@Url.Action("Calender", "Calender")"; }
+            };
+            annyang.addCallback('result', function(userSaid, commandText, phrases) {
+                console.log(userSaid); // sample output: 'hello'
+                console.log(commandText); // sample output: 'hello (there)'
+                console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+                if(userSaid[0]!= " okay") {
+                    console.log(userSaid[0]);
+                    console.log(userSaid[0]!== 'okay');
+                   // document.getElementById('form_description').value = userSaid[0];
+                }
+            });
+            annyang.addCommands(commands);
+            annyang.start();
+        }
+</script>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<section class="team-area">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-5">
+
+                    <div class="team-item-2">
+
+                        <input type="hidden"  id="open"/>
+                        <a href="@Url.Action("Calender", "Calender")" target="" onclick="window.open('@Url.Action("Calender", "Calender")',
+                         'newwindow',
+                         'width=600,height=400');
+              return false;">
+                        <img src="~/Images/@Model.mydoctor.imagePath" /></a>
+
+                   
+                        <div class="team-contact">
+                            <ul>
+                                <li><a  href="@Url.Action("Calender", "Calender")" target="" onclick="window.open('@Url.Action("Calender", "Calender")', 
+                         'newwindow', 
+                         'width=600,height=400'); 
+              return false;" ><i class="fa fancybox-nav"></i></a></li>
+                              
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h4><a href="#">Dr. @Html.DisplayFor(model=>model.mydoctor.firstName) @Html.DisplayFor(model => model.mydoctor.lastName) </a></h4>
+                            <h6>Cardiologists <i class="pe-7s-clock"></i></h6>
+
+                            <div class="team-content-icon">
+                                
+
+                                <a href="@Url.Action("Calender", "Calender")" target="" onclick="window.open('@Url.Action("Calender", "Calender")',
+                         'newwindow',
+                         'width=600,height=400');
+              return false;"><i class="pe-7s-clock" id="aa"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <address>
+                            <ul>
+                                <li>
+                                <i class="pe-7s-map">
+                                
+                                
+                                
+                                
+                                </i>
+                                
+                                
+                                <a href="https://www.google.com/maps/place/ @Html.DisplayFor(model => model.mydoctor.Address)" target="_blank">
+
+                                        @Html.DisplayFor(model => model.mydoctor.Address)
+                                    </a></li>
+                                <li><i class="pe-7s-call"></i>Phone: @Html.DisplayFor(model => model.mydoctor.PhoneNumber)</li>
+                                <li><i class="pe-7s-print"></i>Fax: 001 (407) 901-6400</li>
+                                <li><i class="pe-7s-clock"></i>Friday - Sunday Closed.</li>
+                                <li><i class="pe-7s-mail"></i><a href="mailto:">Email: @Html.DisplayFor(model => model.mydoctor.Email) </a></li>
+                                <li><i class="pe-7s-global"></i><a href="#">Web: www.bdcoder.com</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="carousel-one margin-top-30 owl-carousel owl-theme owl-rtl owl-loaded">
+
+
+
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(1880px, 0px, 0px); transition: all 2s ease 0s; width: 3290px;">
+                                <div class="owl-item cloned" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s2.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item cloned" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s3.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s1.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s2.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item active" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s3.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item cloned" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s1.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-item cloned" style="width: 470px; margin-left: 0px;">
+                                    <div class="item">
+                                        <div class="doctor-list">
+                                            <img src="img/team/s2.png" alt="">
+                                            <div class="content">
+                                                <h4><a href="#">Dr. George A. Beller</a></h4>
+                                                <p>consectetur adipisicing elit. Laboriosam fugiat officiis soluta modi harum dolorem consequatur.</p>
+                                                <a href="#" class="btn btn-theme btn-sm">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left" aria-hidden="true"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right" aria-hidden="true"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-7 team-area">
+                    <img class="team-logo" src="img/team/logo.html" alt="">
+                    <div class="team-details-content">
+                        <h2><a href="#"> DR. @Html.DisplayFor(model => model.mydoctor.firstName) @Html.DisplayFor(model => model.mydoctor.lastName) </a></h2>
+                        <h6>CARDIOLOGISTS</h6>
+                        <h4>Medical doctor</h4>
+                        <p><strong>Doctors are trained in medical</strong> which are usually part of a university. They usually hold a college degree in medicine. <strong>Doctors work in hospitals, medical clinics, from their own offices, </strong>or may even visit people in their homes. They may also work for schools, companies, sports teams, or the military. Medical doctors are often assisted in their work by nurses</p>
+
+                        <h4>History of medical specialization</h4>
+                        <ul class="list-style margin-left-10">
+                            <li><i class="fa fa-angle-right margin-right-10"></i> Surgical or internal medicine</li>
+                            <li><i class="fa fa-angle-right margin-right-10"></i> Age range of patients</li>
+                            <li><i class="fa fa-angle-right margin-right-10"></i> Diagnostic or therapeutic</li>
+                            <li><i class="fa fa-angle-right margin-right-10"></i> Organ-based or technique-based</li>
+                        </ul>
+                        <div class="clearfix margin-top-30">
+                         
+
+                      
+                            <a href="#" class="scrollup" style="display: block;"><i class="pe-7s-drop" aria-hidden="false"></i></a>
+
+                        </div>
+                    
+                    
+                        <div class="margin-bottom-30">
+    <h4>My Motifs</h4>
+    <div class="border-style-2 margin-bottom-20"></div>
+
+
+
+    @Html.AntiForgeryToken()
+    @foreach (var item in Model.interventionList)
+    {
+
+        <li><i class="fa fa-angle-right margin-right-10"></i>  @Html.DisplayFor(modelItem => item.Description)     <i class="fa fancybox-wrap"></i>  @Html.ActionLink("Delete", "Delete", new { id = item.interventionId }) </li>
+
+    }
+
+
+            @using (Html.BeginForm("Create", "Calender", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+
+    @Html.AntiForgeryToken()
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.myintervention.Description,"Ajouter", new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.myintervention.Description, new { @class = "form-control" }) 
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" class="btn btn-default" value="Register" />
+                                        </div>
+                                    </div>
+
+            }
+
+
+
+
+
+
+        </div>
+                            <div class="row">
+                                <div class="col-md-10">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+                    </div>
+</section>
+

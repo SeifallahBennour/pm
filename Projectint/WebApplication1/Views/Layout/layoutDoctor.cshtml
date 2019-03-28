@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Epione</title>
+    @RenderSection("head", required: false)
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Harbor Medical || Health & Medical HTML Template</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/css/bootstrap.min.css")>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href=@Url.Content("/Content/css/style.css")>
+
+    <!-- Responsive stylesheet  -->
+    <link href="@Url.Content("/Content/css/responsive.css") rel=" stylesheet" />
+    <!-- Favicon -->
+    <link href=@Url.Content("/Content/img/Image1.png") rel="shortcut icon" type="image/png">
+   
+
+
+</head>
+<body>
+    <div class="preloader"></div>
+
+
+    <div class="main-navbar no-bg position-fixed header-color">
+
+        <div class="container padding-none">
+
+            <div class="row">
+                @Html.Partial("~/Views/Shared/_LoginPartial.cshtml");
+
+                <div class="col-md-12">
+                    <nav class="navbar navbar-default style-1">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @*<a class="navbar-brand dis-none" href="index-one.html">
+                                    <img src="~/Content/img/Image1.png" alt=""height="42" width="55">
+
+                                </a>*@
+
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeInUp">
+                            <div>
+                                <a class="navbar-brand dis-block" href="@Url.Action("Home", "Home")">
+                                    <img src="~/Content/img/Image2.png" alt="" height="42" width="55">
+
+                                </a>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+
+
+
+                                <li class="dropdown">
+
+                                    <a href="#" class="dropdown-toggle flip-animate" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-hover="Departement">Departement <i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                    <ul class="dropdown-menu">
+
+
+
+                                        <li>
+                                            <a href="@Url.Action("Departement", "Departement")">Chirurgie Departement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement2", "Departement")">Radiothérapie Departement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement3", "Departement")">Hématologie Departement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement4", "Departement")">Anesthésiologie Dapartement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement5", "Departement")">Pédiatrie Departement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement6", "Departement")">Dentaire Departement</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Departement7", "Departement")">Dermatology Departement</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("DashboardD", "Analytics")" class="button" aria-haspopup="true" aria-expanded="false"> <span data-hover="chez un docteur">Dashboard</span></a>
+
+                                </li>
+
+
+
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Header navbar end -->
+    <!-- Start  bootstrap-touch-slider Slider -->
+    <div>
+
+
+        @RenderBody()
+        @RenderSection("Scripts", required: false)
+
+    </div>
+
+    <footer class="bg-faded">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <hr>
+                        <hr>
+                        <ul class="social-icon bg-transparent bordered-theme">
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa fa-skype" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="footer-copy-right bg-defult text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Created By BiTechnologie  <a href="#"> at Esprit</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <a href="#" class="scrollup"><i class="pe-7s-drop" aria-hidden="true"></i></a>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- all plugins and JavaScript -->
+    <script src=@Url.Content("/Scripts/bootstrap-datepicker.min.js")></script>
+    <script src=@Url.Content("/Scripts/css3-animate-it.js")></script>
+    <script src=@Url.Content("/Scripts/bootstrap-dropdownhover.min.js")></script>
+    <script src=@Url.Content("/Scripts/owl.carousel.min.js")></script>
+    <script src=@Url.Content("/Scripts/gallery.js")></script>
+    <script src=@Url.Content("/Scripts/player.min.js")></script>
+    <script src=@Url.Content("/Scripts/comming-soon.js")></script>
+
+    <!-- Main Custom JS -->
+    <script src=@Url.Content("/Scripts/script.js")></script>
+</body>
+</html>

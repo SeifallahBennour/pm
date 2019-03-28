@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication1.Models.Entities.AppointmentModels>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+<section class="inner-bg" style="background-color:#04465F">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <div class="col-md-5 margin-top-60 ">
+     
+      
+@foreach (var item in ViewBag.RDV)
+{
+    
+        <div class="service-item style-1 bg-f8 form-horizontal">
+            <div class="service-icon"><i class="pe-7s-map"></i></div>
+            <div class="content form-horizontal">
+                <h5><a href="#" class="color-333">Rendez vous chez le docteur </a> @item.firstName  <br>
+                @item.lastName</h5>
+                <br>
+                email :   @item.Email <br>
+                numéro de téléphone :  @item.PhoneNumber <br>
+                adresse :  @item.Address <br />
+                <p>
+                    motif du rendez vous: @item.reason  
+                    <br>date du rendez vous : @item.dateAppointment<br>
+                    date prise du rendez vous : @item.datePriseRDV
+                <p />
+                <p>
+                   
+                   
+
+                   
+                </p>
+            </div>
+           
+        </div>
+
+    }
+
+               
+                  
+                
+            </div>
+     
+
+    </div>
+

@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.PostViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PostViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.postId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.posttitre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posttitre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriepostId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriepostId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriename)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

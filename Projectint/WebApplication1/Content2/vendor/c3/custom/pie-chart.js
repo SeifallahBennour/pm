@@ -1,0 +1,1 @@
+var chart9=c3.generate({bindto:"#pieChart",data:{columns:[["Likes",36],["Shares",5]],type:"pie",colors:{Likes:"#219ee6",Shares:"#75ccff"},onclick:function(a,b){console.log("onclick",a,b)},onmouseover:function(a,b){console.log("onmouseover",a,b)},onmouseout:function(a,b){console.log("onmouseout",a,b)}}});

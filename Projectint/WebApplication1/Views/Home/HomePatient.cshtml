@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "HomePatient";
+    Layout = "~/Views/Layout/LayoutPatient.cshtml";
+}
+
+
+
+<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper For Slides -->
+    <div class="carousel-inner" role="listbox">
+
+        <!-- Third Slide -->
+        <div class="item active">
+
+            <!-- Slide Background -->
+            <img src="~/Content/img/depertment/2.jpg" alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+
+            <div class="slide-text slide_style_left">
+                <h1 data-animation="animated fadeInRight">Bienvenu <span class="color-defult"> à Epione </span>!</h1>
+                <p data-animation="animated fadeInLeft">Trouver votre docteur <br> facilement</p>
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">rendez-vous</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+        <!-- Second Slide -->
+        <div class="item">
+
+            <!-- Slide Background -->
+            <img src=@Url.Content("/Content/img/bg/3.jpg") alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+            <!-- Slide Text Layer -->
+            <div class="slide-text slide_style_center">
+                <h1 data-animation="animated bounceInDown">Epione<span class="color-defult"> possede</span> plusieur departement</h1>
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">voir departement</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+        <!-- Third Slide -->
+        <div class="item">
+
+            <!-- Slide Background -->
+            <img src=@Url.Content("/Content/img/bg/1.jpg") alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+            <!-- Slide Text Layer -->
+            <div class="slide-text slide_style_right">
+                <h1 data-animation="animated fadeInLeft">Consulter<span class="color-defult"> votre parcours</span></h1>
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Mon parcour</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+
+
+    </div><!-- End of Wrapper For Slides -->
+    <!-- Left Control -->
+    <a class="left carousel-control" href=@Url.Content("bootstrap-touch-slider") role="button" data-slide="prev">
+        <span class="fa fa-angle-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <!-- Right Control -->
+    <a class="right carousel-control" href=@Url.Content("bootstrap-touch-slider") role="button" data-slide="next">
+        <span class="fa fa-angle-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+
+<section class="divider call-action over-layer-default animatedParent animateOnce" style="background-image:url(img/bg/5.jpg);">
+    <div class="container">
+        <div class="section-title">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="text-center color-white">
+                        <h2 class="color-white">Can You <span class="color-333">Help </span>?</h2>
+                        <div class="line-border-center"></div>
+                        <p>Consequatur alias incidunt cumque officiis, quas eius quaerat ut itaque laudantium corporis nobis ipsum, voluptates at, adipisci fugiat hic voluptate consequuntur porro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-content">
+            <div class="row">
+                <div class="about-feature">
+                    <div class="col-md-4 col-sm-6 animated fadeInLeftShort slow delay-250 go">
+                        <div class="practice-item-1">
+                            <div class="practice-img">
+                                <a href="#">
+                                    <img src="~/Content/img/services/1.jpg" alt="">
+                                    <span class="icon icon-Heart"></span>
+                                </a>
+                            </div>
+                            <div class="practice-content">
+                                <h4><a href="#"> ACCESS YOUR HEALTH RECORDS</a></h4>
+                                <p>Personal Health Record makes it easy to join and stay on a wellness program - lose weight or manage a chronic condition easily.</p>
+                                <a href="#" class="btn-theme hvr-bounce-to-top"> Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 animated fadeInLeftShort slow delay-500 go">
+                        <div class="practice-item-1">
+                            <div class="practice-img">
+                                <a href="#">
+                                    <img src="~/Content/img/services/2.jpg" alt="">
+                                    <span class="icon icon-Heart"></span>
+                                </a>
+                            </div>
+                            <div class="practice-content">
+                                <h4><a href="#"> Health Record automatically</a></h4>
+                                <p>Personal Health Record makes it easy to join and stay on a wellness program - lose weight or manage a chronic condition easily.</p>
+                                <a href="#" class="btn-theme hvr-bounce-to-top"> Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 animated fadeInLeftShort slow delay-750 go">
+                        <div class="practice-item-1">
+                            <div class="practice-img">
+                                <a href="#">
+                                    <img src="~/Content/img/services/3.jpg" alt="">
+                                    <span class="icon icon-Heart"></span>
+                                </a>
+                            </div>
+                            <div class="practice-content">
+                                <h4><a href="#"> Safe &amp; Secure</a></h4>
+                                <p>Personal Health Record makes it easy to join and stay on a wellness program - lose weight or manage a chronic condition easily.</p>
+                                <a href="#" class="btn-theme hvr-bounce-to-top"> Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

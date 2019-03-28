@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "HomeTleader";
+    Layout = "~/Views/Layout/LayoutTleader.cshtml";
+}
+
+<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper For Slides -->
+    <div class="carousel-inner" role="listbox">
+
+        <!-- Third Slide -->
+        <div class="item active">
+
+            <!-- Slide Background -->
+            <img src="~/Content/img/depertment/2.jpg" alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+
+            <div class="slide-text slide_style_left">
+                <h1 data-animation="animated fadeInRight">Bienvenu <span class="color-defult"> à Epione </span>!</h1>
+                <p data-animation="animated fadeInLeft">Suivez et gérez vos projets en un seul endroit <br> facilement</p>
+                <br />
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Mes Projets</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+        <!-- Second Slide -->
+        <div class="item">
+
+            <!-- Slide Background -->
+            <img src=@Url.Content("/Content/img/bg/3.jpg") alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+            <!-- Slide Text Layer -->
+            <br />
+            <br />
+            <div class="slide-text slide_style_center">
+                <h1 data-animation="animated bounceInDown">Epione<span class="color-defult"> possede</span> plusieur departement</h1>
+                <br />
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Mes Tâches </a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+        <!-- Third Slide -->
+        <div class="item">
+
+            <!-- Slide Background -->
+            <img src=@Url.Content("/Content/img/bg/1.jpg") alt="Slider Images" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
+            <!-- Slide Text Layer -->
+            <div class="slide-text slide_style_right">
+                <h1 data-animation="animated fadeInLeft">Consulter<span class="color-defult"> votre parcours</span></h1>
+                <br>
+                <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Forum</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+
+
+    </div><!-- End of Wrapper For Slides -->
+    <!-- Left Control -->
+    <a class="left carousel-control" href=@Url.Content("bootstrap-touch-slider") role="button" data-slide="prev">
+        <span class="fa fa-angle-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <!-- Right Control -->
+    <a class="right carousel-control" href=@Url.Content("bootstrap-touch-slider") role="button" data-slide="next">
+        <span class="fa fa-angle-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>

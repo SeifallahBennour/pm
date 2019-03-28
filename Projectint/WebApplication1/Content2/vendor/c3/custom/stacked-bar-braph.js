@@ -1,0 +1,1 @@
+var chart7=c3.generate({bindto:"#stackedBarGraph",padding:{top:0,left:30},data:{columns:[["data1",30,90,200,400,590,250,330,120],["data2",130,100,200,200,450,150,190,220]],type:"bar",names:{data1:"Visits",data2:"Sales"},colors:{data1:"#2698e2",data2:"#f23f3f"},groups:[["data1","data2"]]},axis:{y:{tick:{count:5}}},grid:{x:{show:!0},y:{show:!0}}});

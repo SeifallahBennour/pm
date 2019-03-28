@@ -1,0 +1,67 @@
+﻿@model WebApplication1.Models.Entities.AppointmentModels
+@{
+    ViewBag.Title = "AddAppointment";
+    Layout = null;
+}
+
+@*@using (Html.BeginForm("AddAppointment", "MakeAppointment", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="jumbotron" style="background-image: url('../../Content/images/slider-10.jpg')">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-sm-8 valign-center">
+                    <h1 class="heading inverse">Expert Consultation at your convenience.</h1>
+                    <a href="about.html" class="btn btn-primary">Read More</a> &nbsp;&nbsp; <a href="why-us.html" class="btn btn-black">Why Medwise</a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="slider-box-appointment">
+                        <div class="header">
+                            <h3 class="heading font-2 text-center">Book an Appointment</h3>
+                        </div>
+                        <hr class="hr-2">
+                        <div class="body">
+                            <form>
+                                <div class="form-group">
+                                    <h5 class="font-2 " style="color:azure">Choose Reason</h5>
+                                    @Html.DropDownList("Reason", new SelectList(ViewBag.reasons, "value", "Text"), htmlAttributes: new { @class = "btn-group bootstrap-select form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <h5 class="font-2" style="color:azure">Choose Date</h5>
+                                    @Html.TextBoxFor(model => model.dateAppointment, new { type = "date" })
+                                </div>
+                                <div class="form-group">
+                                    <h5 class="font-2" style="color:azure">Choose an Hour</h5>
+                                    @Html.DropDownList("Slot", new SelectList(ViewBag.Dispos, "value", "Text", ViewBag.disponibla), htmlAttributes: new { @class = "btn-group bootstrap-select form-control" })
+                                    @Html.DropDownList("Reason", new SelectList(ViewBag.Dispos, "value", "Text", ViewBag.motifa), htmlAttributes: new { @class = "btn-group bootstrap-select form-control" })
+
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <h5 class="font-2" style="color:azure">Description</h5>
+                                    <div class="swal2-textarea">
+                                        @Html.TextAreaFor(model => model.message, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-9">
+                                        <input type="submit" value="Next" class="btn btn-black" />
+                                        @Html.ActionLink("Next", "AddAppointment")
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+Reconnexion dans 15 secondes... Réessayer maintenant ?
+Zone de message
+
+Envoyer un message à ons ben tili

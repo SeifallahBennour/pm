@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+	
+<!-- Mirrored from bootstrap.gallery/Bluemoon-v4.0.1/main-demo-bs4/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Nov 2018 21:57:59 GMT -->
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Bluemoon Admin Panel" />
+		<meta name="keywords" content="Admin, Dashboard, Bootstrap 4 Admin Dashboard, Bootstrap 4 Admin Template, Bootstrap 4 Admin Template, Sales, Admin Dashboard, Traffic, Tasks, Revenue, Orders, Invoices, Projects, Invoices, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+		<meta name="author" content="Bootstrap Gallery" />
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<title>Bluemoon - Bootstrap 4 Admin Dashboard</title>
+		
+		<!--
+			**********************
+			**********************
+			Common CSS files
+			**********************
+			**********************
+		-->
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<!-- Icomoon Icons CSS -->
+		<link rel="stylesheet" href="fonts/icomoon/icomoon.css" />
+
+		<!-- Master CSS -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!--
+			**********************
+			**********************
+			Add Optional CSS files below
+			**********************
+			**********************
+		-->
+
+		<!-- Circliful CSS -->
+		<link rel="stylesheet" href="vendor/circliful/circliful.css" />
+
+	</head>
+	<body>
+
+		<!-- Loading start -->
+		<div id="loading-wrapper">
+			<div id="loader"></div>
+		</div>
+		<!-- Loading end -->
+
+		<!-- BEGIN .app-wrap -->
+		<div class="app-wrap">
+
+			<!-- BEGIN .app-heading -->
+			<header class="app-header">
+				<div class="container-fluid">
+
+					<!-- Row start -->
+					<div class="row gutters">
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+							
+							<!-- BEGIN .logo -->
+							<div class="logo-block">
+								<a href="index.html" class="logo">
+									<img src="img/logo.png" alt="Bluemoon Admin Dashboard" />
+								</a>
+							</div>
+							<!-- END .logo -->
+
+						</div>
+						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+
+							<!-- Header actions start -->
+							<ul class="header-actions">
+								<li class="dropdown">
+									<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+										<i class="icon-warning4"></i>
+										<span class="count-label">7</span>
+									</a>
+									<div class="dropdown-menu lg dropdown-menu-right" aria-labelledby="notifications">
+										<ul class="imp-notify">
+											<li>
+												<div class="icon">W</div>
+												<div class="details">
+													<h6 class="username">Wilson</h6>
+													<p class="desc">The best Dashboard design I have seen ever.</p>
+													<p class="time">6:30 PM</p>
+												</div>
+											</li>
+											<li>
+												<div class="icon green">J</div>
+												<div class="details">
+													<h6 class="username">John Smith</h6>
+													<p class="desc">Jhonny sent you a message. Read now!</p>
+													<p class="time">7:20 PM</p>
+												</div>
+											</li>
+											<li>
+												<div class="icon red">R</div>
+												<div class="details">
+													<h6 class="username">Zustin Mezzell</h6>
+													<p class="desc">Stella, Added you as a Friend. Accept it!</p>
+													<p class="time">3:45 PM</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="#" id="todos" data-toggle="dropdown" aria-haspopup="true">
+										<i class="icon-archive3"></i>
+										<span class="count-label red">5</span>
+									</a>
+									<div class="dropdown-menu lg dropdown-menu-right" aria-labelledby="todos">
+										<ul class="tasks-widget">
+											<li>
+												<p>Task #48<span>90%</span></p>
+												<div class="progress">
+													<div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+														<span class="sr-only">90% Complete (success)</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<p>Task #98<span>60%</span></p>
+												<div class="progress">
+													<div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+														<span class="sr-only">60% Complete (success)</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<p>Task #7<span>40%</span></p>
+												<div class="progress">
+													<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+														<span class="sr-only">40% Complete (success)</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="dropdown">
+									<a href="#" id="userSettings" class="user-settings clearfix" data-toggle="dropdown" aria-haspopup="true">
+										<span class="avatar">
+											<i class="icon-account_circle"></i>
+										</span>
+										<span class="user-name">Emily Russell <i class="icon-chevron-small-down downarrow"></i></span>
+									</a>
+									<div class="dropdown-menu md dropdown-menu-right" aria-labelledby="userSettings">
+										<div class="admin-settings">
+											<ul class="admin-settings-list">
+												<li>
+													<a href="profile.html">
+														<span class="icon icon-face"></span>
+														<span class="text-name">My Profile</span>
+														<span class="badge badge-success">75% Complete</span>
+													</a>
+												</li>
+												<li>
+													<a href="notifications.html">
+														<span class="icon icon-notifications_none"></span>
+														<span class="text-name">Notifications</span>
+														<span class="badge badge-orange">12</span>
+													</a>
+												</li>
+												<li>
+													<a href="secure.html">
+														<span class="icon icon-av_timer"></span>
+														<span class="text-name">Secure Account</span>
+													</a>
+												</li>
+											</ul>
+											<div class="actions">
+												<a href="login.html" class="btn btn-primary">Logout</a>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- Header actions end -->
+
+							<!-- Custom Search start -->
+							<div class="custom-search">
+								<input type="text" class="search-query" placeholder="Search here ...">
+								<i class="icon-search"></i>
+							</div>
+							<!-- Custom Search end -->
+
+						</div>
+					</div>
+					<!-- Row start -->
+
+				</div>
+			</header>
+			<!-- END: .app-heading -->
+
+			<!-- BEGIN .app-container -->
+			<div class="app-container">
+
+				<!-- Main nav start -->
+				<nav class="navbar navbar-expand-lg navbar-menu">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon">
+							<i class="icon-menu5"></i>
+						</span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-dashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-blur_on"></i>
+									<span class="nav-item">Dashboards</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="index.html">Dashboard</a>
+									<a class="dropdown-item" href="dashboard2.html">Dashboard 2</a>
+									<a class="dropdown-item" href="dashboard3.html">Dashboard 3</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown active">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-apps" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-widgets"></i>
+									<span class="nav-item">Apps</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="chat.html">Chat App</a>
+									<a class="dropdown-item" href="tasks.html">Tasks App</a>
+									<a class="dropdown-item" href="widgets.html">Widgets</a>
+									<a class="dropdown-item" href="datepickers.html">Datepickers</a>
+									<a class="dropdown-item" href="gallery.html">Gallery</a>
+									<a class="dropdown-item" href="comments.html">Comments</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-layouts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-web"></i>
+									<span class="nav-item">Layouts</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="layout.html">Default Layout</a>
+									<a class="dropdown-item" href="layout-with-daterange.html">Layout With Date Range</a>
+									<a class="dropdown-item" href="layout-with-labels.html">Layout With Labels</a>
+									<a class="dropdown-item" href="custom-drag.html">Custom Drag</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-business_center"></i>
+									<span class="nav-item">Pages</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="blog.html">Blog</a>
+									<a class="dropdown-item" href="profile.html">Profile</a>
+									<a class="dropdown-item" href="contacts.html">Contacts</a>
+									<a class="dropdown-item" href="calendar.html">Calendar</a>
+									<a class="dropdown-item" href="invoice.html">Invoice</a>
+									<a class="dropdown-item" href="timeline.html">Timeline</a>
+									<a class="dropdown-item" href="pricing.html">Pricing</a>
+									<a class="dropdown-item" href="faq.html">Faq's</a>
+									<a class="dropdown-item" href="search.html">Search Results</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-forms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-business_center"></i>
+									<span class="nav-item">Forms</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="bs-select.html">BS Select</a>
+									<a class="dropdown-item" href="range-sliders.html">Range Sliders</a>
+									<a class="dropdown-item" href="form-inputs.html">Form Inputs</a>
+									<a class="dropdown-item" href="input-groups.html">Inputs Groups</a>
+									<a class="dropdown-item" href="checkbox-radio.html">Checkbox &amp; Radio</a>
+									<a class="dropdown-item" href="contact.html">Contact Form</a>
+									<a class="dropdown-item" href="contact2.html">Contact Form #2</a>
+									<a class="dropdown-item" href="contact3.html">Contact Form #3</a>
+									<a class="dropdown-item" href="contact4.html">Contact Form #4</a>
+									<a class="dropdown-item" href="subscribe-form.html">Subscribe Form</a>
+									<a class="dropdown-item" href="checkout-form.html">Checkout Form</a>
+									<a class="dropdown-item" href="summernote-editor.html">Editor</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-ui-elements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-style"></i>
+									<span class="nav-item">UI Elements</span>									
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="general-elements.html">General Elements</a>
+									<a class="dropdown-item" href="buttons.html">Buttons</a>
+									<a class="dropdown-item" href="button-groups.html">Button Groups</a>
+									<a class="dropdown-item" href="tabs.html">Tabs</a>
+									<a class="dropdown-item" href="modals.html">Modals</a>
+									<a class="dropdown-item" href="accordion.html">Accordion</a>
+									<a class="dropdown-item" href="labels-badges.html">Labels &amp; Badges</a>
+									<a class="dropdown-item" href="notifications.html">Notifications</a>
+									<a class="dropdown-item" href="carousel.html">Carousels</a>
+									<a class="dropdown-item" href="list-items.html">List Items</a>
+									<a class="dropdown-item" href="cards.html">Cards</a>
+									<a class="dropdown-item" href="navbars.html">Navbars</a>
+									<a class="dropdown-item" href="popovers-tooltips.html">Popovers &amp; Tooltips</a>
+									<a class="dropdown-item" href="progress.html">Progress Bars</a>
+									<a class="dropdown-item" href="pagination.html">Pagination</a>
+									<a class="dropdown-item" href="typography.html">Typography</a>
+									<a class="dropdown-item" href="media-objects.html">Media Objects</a>
+									<a class="dropdown-item" href="icons.html">Icons</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-tables" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-view_week"></i>
+									<span class="nav-item">Tables</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="custom-tables.html">Custom Tables</a>
+									<a class="dropdown-item" href="tables.html">Tables</a>
+									<a class="dropdown-item" href="datatables.html">Data Tables</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-graphs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-terrain"></i>
+									<span class="nav-item">Graphs</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="c3-graphs.html">C3 Graphs</a>
+									<a class="dropdown-item" href="flot.html">Flot Graphs</a>
+									<a class="dropdown-item" href="morris.html">Morris Graphs</a>
+									<a class="dropdown-item" href="google-maps.html">Google Maps</a>
+									<a class="dropdown-item" href="vector-maps.html">Vector Maps</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="bluemoon-authentication" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="nav-icon icon-lock-open"></i>
+									<span class="nav-item">Login</span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="login.html">Login</a>
+									<a class="dropdown-item" href="signup.html">Signup</a>
+									<a class="dropdown-item" href="forgot-pwd.html">Forgot Password</a>
+									<a class="dropdown-item" href="locked-screen.html">Locked Screen</a>
+									<a class="dropdown-item" href="error404.html">Error 404</a>
+									<a class="dropdown-item" href="error505.html">Error 505</a>
+									<a class="dropdown-item" href="secure.html">Secure Account</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- Main nav end -->
+
+				<!-- BEGIN .page-header -->
+				<header class="page-header">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="page-title">
+									<h3>Widgets</h3>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="right-stats">
+									<a href="javascript:void(0)" class="btn btn-danger"><span>895</span>Sales</a>
+									<a href="javascript:void(0)" class="btn btn-success"><span>125</span>Leads</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- END: .page-header -->
+
+				<!-- BEGIN .main-content -->
+				<div class="main-content">
+
+					<!-- Row starts -->
+					<div class="row gutters">
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+							<div class="card">
+								<div class="card-header">Messages</div>
+								<div class="card-body height2">
+									<ul class="chat-list">
+										<li class="in">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user4.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5>Jimmy Willams</h5>
+													<p>Raw denim heard of them tofu master cleanse</p>
+												</div>
+											</div>
+										</li>
+										<li class="out">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user8.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5>Peter</h5>
+													<p>Next level veard</p>
+												</div>
+											</div>
+										</li>
+										<li class="in">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user5.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5 class="name">Sandreiano</h5>
+													<p>Will stumptown scenester farm-to-table denim coffee viral.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-header">Clients</div>
+								<div class="card-body height2">
+									<ul class="top-clients">
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user1.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$34,098</div>
+												<p class="biz-name">Killer Demin Ltd.</p>
+												<div class="progress">
+													<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user9.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$21,660</div>
+												<p class="biz-name">Welco Smartness Tech.</p>
+												<div class="progress">
+													<div class="progress-bar bg-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user5.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$14,985</div>
+												<p class="biz-name">Xioma Willams &amp; co.</p>
+												<div class="progress">
+													<div class="progress-bar bg-success" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" style="width: 53%">
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="card">
+								<div class="card-header">Todos</div>
+								<div class="toggle-switch tr">
+									<input type="checkbox" class="check" checked />
+									<b class="b switch"></b>
+									<b class="b track"></b>
+								</div>
+								<div class="card-body height2">
+									<ul class="task-list">
+										<li class="list">
+											<span></span>
+											<div class="task-details">
+												<p class="date">
+													<small class="text-secondary">Meeting</small> - Upcoming in 5 days
+												</p>
+												<p>Meeting with Sara in the Caffee Caldo for Brunch</p>
+												<small>Scheduled for 16th Mar, 2017</small>
+											</div>
+										</li>
+										<li class="list">
+											<span></span>
+											<div class="task-details">
+												<p class="date">
+													<small class="text-primary">Meeting</small> - Delay 7 days
+												</p>
+												<p>Technical management meeting</p>
+												<small>Completed 15 days ago</small>
+											</div>
+										</li>
+										<li class="list completed">
+											<span></span>
+											<div class="task-details">
+												<p class="date">
+													<small>Transfer</small> - Completed
+												</p>
+												<p>Transfer all domain names as soon as possible!</p>
+												<small>Completed 2 days ago</small>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+					<!-- Row start -->
+					<div class="row gutters">
+						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+
+							<!-- Row start -->
+							<div class="row gutters">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<!-- Deals start -->
+									<div class="card">
+										<div class="card-header">Deals</div>
+										<div class="card-body">
+											<div class="deals-widget">
+												<div class="row gutter">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+														<div class="small-graph">
+															<span class="updating-chart-five">4,2,2,2,2,5,2,1,3,2,1,2,2,4</span>
+														</div>
+														<p><i class="icon-triangle-up"></i>1250</p>
+														<h5>Daily</h5>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+														<div class="small-graph">
+															<span class="updating-chart-four">2,1,1,1,2,2,2,2,1,3,3,2,1,2</span>
+														</div>
+														<p><i class="icon-triangle-down"></i>8275</p>
+														<h5>Weekly</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Deals end -->
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<!-- Invoices start -->
+									<div class="card">
+										<div class="card-header">Invoices</div>
+										<div class="card-body">
+											<div class="invoices-widget">
+												<div class="row gutter">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+														<div class="progress sm">
+															<div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+														<p><i class="icon-triangle-up"></i>825</p>
+														<h5>Daily</h5>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-6">
+														<div class="progress sm">
+															<div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+														<p><i class="icon-triangle-down"></i>6590</p>
+														<h5>Weekly</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Invoices end -->
+								</div>
+							</div>
+							<!-- Row end -->
+
+							<!-- Row start -->
+							<div class="row gutters">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<div class="card">
+										<div class="card-header">Messages</div>
+										<div class="card-body">
+											<ul class="product-status">
+												<li class="clearfix">
+													<div class="customer">
+														<img src="img/avatar1.svg" alt="Bluemoon Admin Template" />
+													</div>
+													<div class="product-details">
+														<span class="badge badge-primary">Delivered</span>
+														<h6>Product has been delivered.</h6>
+														<p>We are pleased to inform that the following items in your order OD556753 have been delivered.</p>
+													</div>
+												</li>
+												<li class="clearfix">
+													<div class="customer">
+														<img src="img/avatar2.svg" alt="Bluemoon Admin Template" />
+													</div>
+													<div class="product-details">
+														<span class="badge badge-danger">Cancelled</span>
+														<h6>Product has been cancelled.</h6>
+														<p>The following items in your order OD576766 have been cancelled.</p>
+													</div>
+												</li>
+												<li class="clearfix">
+													<div class="customer">
+														<img src="img/avatar4.svg" alt="Bluemoon Admin Template" />
+													</div>
+													<div class="product-details">
+														<span class="badge badge-success">Returned</span>
+														<h6>Product has been returned.</h6>
+														<p>Thank you for shopping! The following items in your order OD576798 have been delivered.</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Row end -->
+
+							<!-- Row start -->
+							<div class="row gutters">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<!-- Photo gallery start -->
+									<div class="card">
+										<div class="card-header">Photos</div>
+										<div class="card-body">
+											<div class="row gutters gallery-sm">
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel1-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel2-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel3-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel3-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel1-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel2-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel2-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel3-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel1-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel3-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel3-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+												<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+													<img src="img/crousel/carousel1-thumb.jpg" class="img-fluid rounded" alt="Bluemoon Admin" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Photo gallery end -->
+								</div>
+							</div>
+							<!-- Row end -->
+
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+							<!-- Statistics start -->
+							<div class="card purple">
+								<div class="card-header">Statistics</div>
+								<div class="card-body">
+									<ul class="stats">
+										<li>
+											<span class="icon">
+												<i class="icon-shopping-basket"></i>
+											</span>
+											New notification received.
+										</li>
+										<li>
+											<span class="icon red">
+												<i class="icon-fire"></i>
+											</span>
+											A new ticket opened.
+										</li>
+										<li>
+											<span class="icon yellow">
+												<i class="icon-camera"></i>
+											</span>
+											Major Release Reminders.
+										</li>
+										<li>
+											<span class="icon green">
+												<i class="icon-lightbulb"></i>
+											</span>
+											End-of-Support Notifications.
+										</li>
+										<li>
+											<span class="icon">
+												<i class="icon-emoji-happy"></i>
+											</span>
+											Tell us what you think!
+										</li>
+										<li>
+											<span class="icon red">
+												<i class="icon-fire"></i>
+											</span>
+											That's A great idea!
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Statistics end -->
+							<!-- Tasks start -->
+							<div class="card todo-container">
+								<div class="card-header">
+									Tasks
+								</div>
+								<div class="card-body">
+									<ul class="todo-body">
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot"></span>
+												<p>Team Meeting<span class="time">10:30am</span></p>
+												<small>Mobile App</small>
+											</div>
+										</li>
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot orange"></span>
+												<p>Make new page<span class="time">12pm</span></p>
+												<small>New website</small>
+											</div>
+										</li>
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot yellow"></span>
+												<p>Code review<span class="time">3pm</span></p>
+												<small>Product launch</small>
+											</div>
+										</li>
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot green"></span>
+												<p>Catchup with Bristo <span class="time">9am</span></p>
+												<small>Mobile Project</small>
+											</div>
+										</li>
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot orange"></span>
+												<p>Trekking with Maria<span class="time">5pm</span></p>
+												<small>Fun time</small>
+											</div>
+										</li>
+										<li class="todo-list">
+											<div class="todo-info">
+												<span class="dot yellow"></span>
+												<p>Coffee with Julia<span class="time">9pm</span></p>
+												<small>Friends</small>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Tasks end -->
+						</div>
+					</div>
+					<!-- Row end -->
+
+				</div>
+				<!-- END: .main-content -->
+
+				<!-- BEGIN .main-footer -->
+				<footer class="main-footer">© Bluemoon 2013 - 2018</footer>
+				<!-- END: .main-footer -->
+
+			</div>
+			<!-- END: .app-container -->
+
+		</div>
+		<!-- END: .app-wrap -->
+
+
+		<!--
+			**********************
+			**********************
+			Common JS files
+			**********************
+			**********************
+		-->
+
+		<!-- jQuery JS. -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Tether Js, then other JS. -->
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!--
+			**********************
+			**********************
+			Add Optional JS files / Plugns
+			**********************
+			**********************
+		-->
+
+		<!-- Slimscroll JS -->
+		<script src="vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="vendor/slimscroll/custom-scrollbar.js"></script>
+
+		<!-- News Ticker JS -->
+		<script src="vendor/newsticker/newsTicker.min.js"></script>
+		<script src="vendor/newsticker/custom-newsTicker.js"></script>
+
+		<!-- Circliful -->
+		<script src="vendor/circliful/circliful.min.js"></script>
+		<script src="vendor/circliful/circliful.custom.js"></script>
+
+		<!-- Peity JS -->
+		<script src="vendor/peity/peity.min.js"></script>
+		<script src="vendor/peity/custom-peity.js"></script>
+	
+		<!-- Common JS -->
+		<script src="js/common.js"></script>
+	</body>
+
+<!-- Mirrored from bootstrap.gallery/Bluemoon-v4.0.1/main-demo-bs4/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Nov 2018 21:58:00 GMT -->
+</html>

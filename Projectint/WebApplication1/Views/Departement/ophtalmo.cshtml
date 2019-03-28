@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication1.Models.Entities.Doctor>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+<section class="inner-bg" style="background-color:#04465F">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<div class="container">
+    <div class="section-content">
+        <div class="row">
+            <div class="team-area-col-4">
+                @foreach (var item in ViewBag.DoctorsVB)
+                {
+
+
+                    <div class="col-md-4">
+                        <div class="team-item-4">
+                            <img src="~/Content/img/team/3.png" alt="">
+
+                            <div class="team-contact">
+                               
+                            </div>
+                            <div class="team-content">
+                                <h5>Prenom: @item.firstName</h5>
+                                <h5>Nom: @item.lastName</h5>
+                                <h5>Email:@item.Email </h5>
+                                <h5>Numéro téléphone :@item.PhoneNumber </h5>
+                                <h5>Adresse :@item.Address </h5>
+                                <h5>spécialité :@item.nom </h5>
+
+                                <br />
+                                <br />
+                                <div>
+                                    <a href="@Url.Action("SingIn", "Home")" class="btn-subscriber">Prendre un rendez vous </a>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

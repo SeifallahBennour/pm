@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Bluemoon Admin Panel" />
+    <meta name="keywords" content="Admin, Dashboard, Bootstrap 4 Admin Dashboard, Bootstrap 4 Admin Template, Bootstrap 4 Admin Template, Sales, Admin Dashboard, Traffic, Tasks, Revenue, Orders, Invoices, Projects, Invoices, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="~/Content2/img/favicon.ico" />
+    <title>Bluemoon - Bootstrap 4 Admin Dashboard</title>
+
+    <!--
+        **********************
+        **********************
+        Common CSS files
+        **********************
+        **********************
+
+    -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content2/css/bootstrap.min.css" />
+    <!-- Icomoon Icons CSS -->
+    <link rel="stylesheet" href="~/Content2/fonts/icomoon/icomoon.css" />
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="~/Content2/css/main.css" />
+    <!--
+        **********************
+        **********************
+        Optional CSS files
+        **********************
+        **********************
+    -->
+    <!-- Circliful CSS -->
+    <link rel="stylesheet" href="~/Content2/vendor/circliful/circliful.css" />
+    <!-- C3 CSS -->
+    <link rel="stylesheet" href="~/Content2/vendor/c3/c3.min.css" />
+</head>
+<body>
+    <!-- Loading start -->
+    <div id="loading-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- Loading end -->
+    <!-- BEGIN .app-wrap -->
+    <div class="app-wrap">
+        <!-- BEGIN .app-heading -->
+        <header class="app-header">
+            <div class="container-fluid">
+                <!-- Row start -->
+                <div class="row gutters">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+
+                        <!-- BEGIN .logo -->
+                        <div class="logo-block">
+                            <a href="~/Content2/index.html" class="logo">
+                                <img src="~/Content2/img/logo.png" alt="Bluemoon Admin Dashboard" />
+                            </a>
+                        </div>
+                        <!-- END .logo -->
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                        <!-- Header actions start -->
+                        <ul class="header-actions">
+                            <li class="dropdown">
+                                <a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+                                    <i class="icon-warning4"></i>
+                                    <span class="count-label">7</span>
+                                </a>
+                                <div class="dropdown-menu lg dropdown-menu-right" aria-labelledby="notifications">
+                                    <ul class="imp-notify">
+                                        <li>
+                                            <div class="icon">W</div>
+                                            <div class="details">
+                                                <h6 class="username">Wilson</h6>
+                                                <p class="desc">The best Dashboard design I have seen ever.</p>
+                                                <p class="time">6:30 PM</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon green">J</div>
+                                            <div class="details">
+                                                <h6 class="username">John Smith</h6>
+                                                <p class="desc">Jhonny sent you a message. Read now!</p>
+                                                <p class="time">7:20 PM</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon red">R</div>
+                                            <div class="details">
+                                                <h6 class="username">Zustin Mezzell</h6>
+                                                <p class="desc">Stella, Added you as a Friend. Accept it!</p>
+                                                <p class="time">3:45 PM</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" id="todos" data-toggle="dropdown" aria-haspopup="true">
+                                    <i class="icon-archive3"></i>
+                                    <span class="count-label red">5</span>
+                                </a>
+                                <div class="dropdown-menu lg dropdown-menu-right" aria-labelledby="todos">
+                                    <ul class="tasks-widget">
+                                        <li>
+                                            <p>Task #48<span>90%</span></p>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                                    <span class="sr-only">90% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>Task #98<span>60%</span></p>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                    <span class="sr-only">60% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>Task #7<span>40%</span></p>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                    <span class="sr-only">40% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="userSettings" class="user-settings clearfix" data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="avatar">
+                                        <i class="icon-account_circle"></i>
+                                    </span>
+                                    <span class="user-name">Emily Russell <i class="icon-chevron-small-down downarrow"></i></span>
+                                </a>
+                                <div class="dropdown-menu md dropdown-menu-right" aria-labelledby="userSettings">
+                                    <div class="admin-settings">
+                                        <ul class="admin-settings-list">
+                                            <li>
+                                                <a href="~/Content2/profile.html">
+                                                    <span class="icon icon-face"></span>
+                                                    <span class="text-name">My Profile</span>
+                                                    <span class="badge badge-success">75% Complete</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Content2/notifications.html">
+                                                    <span class="icon icon-notifications_none"></span>
+                                                    <span class="text-name">Notifications</span>
+                                                    <span class="badge badge-orange">12</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Content2/secure.html">
+                                                    <span class="icon icon-av_timer"></span>
+                                                    <span class="text-name">Secure Account</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="actions">
+                                            <a href="~/Content2/login.html" class="btn btn-primary">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Header actions end -->
+                        <!-- Custom Search start -->
+                        <div class="custom-search">
+                            <input type="text" class="search-query" placeholder="Search here ...">
+                            <i class="icon-search"></i>
+                        </div>
+                        <!-- Custom Search end -->
+                    </div>
+                </div>
+                <!-- Row start -->
+            </div>
+        </header>
+        <!-- END: .app-heading -->
+        <!-- BEGIN .app-container -->
+        <div class="app-container">
+            <!-- Main nav start -->
+            <nav class="navbar navbar-expand-lg navbar-menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="icon-menu5"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-dashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-blur_on"></i>
+                                <span class="nav-item">Dashboards</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/index.html">Dashboard</a>
+                                <a class="dropdown-item" href="~/Content2/dashboard2.html">Dashboard 2</a>
+                                <a class="dropdown-item" href="~/Content2/dashboard3.html">Dashboard 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-apps" role="button"  aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-business_center"></i>
+                                <span class="nav-item">Docteurs</span>
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="@Url.Action("ListePatientAdmin", "Patient")" id="bluemoon-layouts" role="button"  aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-style"></i>
+                                <span class="nav-item">Patients</span>
+                            </a>
+                           
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-business_center"></i>
+                                <span class="nav-item">Pages</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/blog.html">Blog</a>
+                                <a class="dropdown-item" href="~/Content2/profile.html">Profile</a>
+                                <a class="dropdown-item" href="~/Content2/contacts.html">Contacts</a>
+                                <a class="dropdown-item" href="~/Content2/calendar.html">Calendar</a>
+                                <a class="dropdown-item" href="~/Content2/invoice.html">Invoice</a>
+                                <a class="dropdown-item" href="~/Content2/timeline.html">Timeline</a>
+                                <a class="dropdown-item" href="~/Content2/.html">Pricing</a>
+                                <a class="dropdown-item" href="~/Content2/faq.html">Faq's</a>
+                                <a class="dropdown-item" href="~/Content2/search.html">Search Results</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-forms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-business_center"></i>
+                                <span class="nav-item">Forms</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/bs-select.html">BS Select</a>
+                                <a class="dropdown-item" href="~/Content2/range-sliders.html">Range Sliders</a>
+                                <a class="dropdown-item" href="~/Content2/form-inputs.html">Form Inputs</a>
+                                <a class="dropdown-item" href="~/Content2/input-groups.html">Inputs Groups</a>
+                                <a class="dropdown-item" href="~/Content2/checkbox-radio.html">Checkbox &amp; Radio</a>
+                                <a class="dropdown-item" href="~/Content2/contact.html">Contact Form</a>
+                                <a class="dropdown-item" href="~/Content2/contact2.html">Contact Form #2</a>
+                                <a class="dropdown-item" href="~/Content2/contact3.html">Contact Form #3</a>
+                                <a class="dropdown-item" href="~/Content2/contact4.html">Contact Form #4</a>
+                                <a class="dropdown-item" href="~/Content2/subscribe-form.html">Subscribe Form</a>
+                                <a class="dropdown-item" href="~/Content2/checkout-form.html">Checkout Form</a>
+                                <a class="dropdown-item" href="~/Content2/summernote-editor.html">Editor</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-ui-elements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-style"></i>
+                                <span class="nav-item">UI Elements</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/general-elements.html">General Elements</a>
+                                <a class="dropdown-item" href="~/Content2/buttons.html">Buttons</a>
+                                <a class="dropdown-item" href="~/Content2/-groups.html">Button Groups</a>
+                                <a class="dropdown-item" href="~/Content2/tabs.html">Tabs</a>
+                                <a class="dropdown-item" href="~/Content2/modals.html">Modals</a>
+                                <a class="dropdown-item" href="~/Content2/accordion.html">Accordion</a>
+                                <a class="dropdown-item" href="~/Content2/labels-badges.html">Labels &amp; Badges</a>
+                                <a class="dropdown-item" href="~/Content2/notifications.html">Notifications</a>
+                                <a class="dropdown-item" href="~/Content2/carousel.html">Carousels</a>
+                                <a class="dropdown-item" href="~/Content2/list-items.html">List Items</a>
+                                <a class="dropdown-item" href="~/Content2/cards.html">Cards</a>
+                                <a class="dropdown-item" href="~/Content2/navbars.html">Navbars</a>
+                                <a class="dropdown-item" href="~/Content2/popovers-tooltips.html">Popovers &amp; Tooltips</a>
+                                <a class="dropdown-item" href="~/Content2/progress.html">Progress Bars</a>
+                                <a class="dropdown-item" href="~/Content2/pagination.html">Pagination</a>
+                                <a class="dropdown-item" href="~/Content2/typography.html">Typography</a>
+                                <a class="dropdown-item" href="~/Content2/-objects.html">Media Objects</a>
+                                <a class="dropdown-item" href="~/Content2/icons.html">Icons</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-tables" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-view_week"></i>
+                                <span class="nav-item">Tables</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/custom-tables.html">Custom Tables</a>
+                                <a class="dropdown-item" href="~/Content2/tables.html">Tables</a>
+                                <a class="dropdown-item" href="~/Content2/datatables.html">Data Tables</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-graphs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-terrain"></i>
+                                <span class="nav-item">Graphs</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/c3-graphs.html">C3 Graphs</a>
+                                <a class="dropdown-item" href="~/Content2/flot.html">Flot Graphs</a>
+                                <a class="dropdown-item" href="~/Content2/morris.html">Morris Graphs</a>
+                                <a class="dropdown-item" href="~/Content2/google-maps.html">Google Maps</a>
+                                <a class="dropdown-item" href="~/Content2/vector-maps.html">Vector Maps</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bluemoon-authentication" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nav-icon icon-lock-open"></i>
+                                <span class="nav-item">Login</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="~/Content2/login.html">Login</a>
+                                <a class="dropdown-item" href="~/Content2/signup.html">Signup</a>
+                                <a class="dropdown-item" href="~/Content2/forgot-pwd.html">Forgot Password</a>
+                                <a class="dropdown-item" href="~/Content2/locked-screen.html">Locked Screen</a>
+                                <a class="dropdown-item" href="~/Content2/error404.html">Error 404</a>
+                                <a class="dropdown-item" href="~/Content2/error505.html">Error 505</a>
+                                <a class="dropdown-item" href="~/Content2/secure.html">Secure Account</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Main nav end -->
+            <!-- BEGIN .page-header -->
+            <header class="page-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="page-title">
+                                <h3>Dashboard</h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="right-stats">
+                                <a href="javascript:void(0)" class="btn btn-danger"><span>895</span>Sales</a>
+                                <a href="javascript:void(0)" class="btn btn-success"><span>125</span>Leads</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END: .page-header -->
+            <!-- BEGIN .main-content -->
+            <div>
+                @RenderBody()
+            </div>
+            <!-- END: .main-content -->
+            <!-- BEGIN .main-footer -->
+            <footer class="main-footer">© Bluemoon 2013 - 2018</footer>
+            <!-- END: .main-footer -->
+        </div>
+        <!-- END: .app-container -->
+    </div>
+    <!-- END: .app-wrap -->
+    <!--
+        **********************
+        **********************
+        Common JS files
+        **********************
+        **********************
+    -->
+    <!-- jQuery JS. -->
+    <script src="~/Content2/js/jquery.js"></script>
+    <!-- Tether Js, then other JS. -->
+    <script src="~/Content2/js/popper.min.js"></script>
+    <script src="~/Content2/js/bootstrap.min.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="~/Content2/vendor/slimscroll/slimscroll.min.js"></script>
+    <script src="~/Content2/vendor/slimscroll/custom-scrollbar.js"></script>
+    <!--
+        **********************
+        **********************
+        Optional JS files - Plugns
+        **********************
+        **********************
+    -->
+    <!-- Circliful JS -->
+    <script src="~/Content2/vendor/circliful/circliful.min.js"></script>
+    <script src="~/Content2/vendor/circliful/circliful.custom.js"></script>
+    <!-- Peity JS -->
+    <script src="~/Content2/vendor/peity/peity.min.js"></script>
+    <script src="~/Content2/vendor/peity/custom-peity.js"></script>
+    <!-- D3 JS -->
+    <script src="~/Content2/vendor/d3/d3.min.js"></script>
+    <!-- C3 Graphs -->
+    <script src="~/Content2/vendor/c3/c3.min.js"></script>
+    <script src="~/Content2/vendor/c3/custom/bar-graph-one.js"></script>
+    <!-- JVector Map -->
+    <script src="~/Content2/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="~/Content2/vendor/jvectormap/world-mill-en.js"></script>
+    <script src="~/Content2/vendor/jvectormap/gdp-data.js"></script>
+    <script src="~/Content2/vendor/jvectormap/custom/world-map-markers.js"></script>
+    <!-- Common JS -->
+    <script src="~/Content2/js/common.js"></script>
+
+</body>
+</html>

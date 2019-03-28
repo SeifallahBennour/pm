@@ -1,0 +1,52 @@
+﻿@using Domain.Entities;
+@model IEnumerable<User>
+
+
+
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+<body>
+    <canvas id="income" width="600" height="400"></canvas>
+    
+
+    <script>
+        var datas = @Html.Raw(Json.Encode(ViewBag.NbrPT));
+   
+                var barData = {
+                    labels: ["Nombre de patients traités"],
+                datasets : [
+                    {
+                        fillColor : "#48A497",
+                        strokeColor : "#48A4D1",
+                        data: datas
+                    },
+                ]
+            }
+			var income = document.getElementById("income").getContext("2d");
+			   new Chart(income).Bar(barData);
+
+    </script>
+</body>
+
+</html>
+
+    @*//  var myChart = new Chart(width: 500, height: 300, theme: ChartTheme.Green)
+    //.AddTitle("Product Sales")
+    // .AddSeries("Default",
+    //            xValue: Model, xField: "lastName",
+    //            yValues: Model, yFields: "cin")
+    // .Write("html");*@
+
+
+
+
+

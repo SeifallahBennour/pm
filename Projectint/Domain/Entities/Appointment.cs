@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Entities
+{ //public enum State { Valid , Invalid , Cancelied }
+   public  class Appointment
+    {
+    
+
+        [Key]
+        public int appointmentId { get; set; }
+        
+        
+        public String dateAppointmentJEE { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime datePriseRDV { get; set; }
+       
+        public string reason { get; set; }
+        public string state { get; set; }
+        public string message { get; set; }
+        public int HourAppointment { get; set; }
+        public float price { get; set; }
+        public int note { get; set; }
+
+        public virtual Raiting Raiting { get; set; }
+        public virtual Path path { get; set; }
+        public int? IdPatient { get; set; }
+
+        [ForeignKey("IdPatient")]
+        public virtual Patient Patient { get; set; }
+
+        public int? Iddoctor { get; set; }
+
+        [ForeignKey("Iddoctor")]
+        public virtual Doctor Doctor { get; set; }
+      
+    }
+}

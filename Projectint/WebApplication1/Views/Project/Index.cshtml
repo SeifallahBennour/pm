@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebApplication1.Models.ProjectViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.projectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.projectname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.teamleadername)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.teamleadername)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.projectId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.projectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.projectId })
+        </td>
+    </tr>
+}
+
+</table>
