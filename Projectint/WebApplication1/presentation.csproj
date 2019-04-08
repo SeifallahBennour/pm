@@ -741,6 +741,8 @@
     <Content Include="Views\Post\Details.cshtml" />
     <Content Include="Views\Post\createpostlike.cshtml" />
     <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\listuser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API-Controllers\" />
