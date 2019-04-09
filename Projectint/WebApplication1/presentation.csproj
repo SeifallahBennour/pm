@@ -217,6 +217,7 @@
     <Compile Include="Controllers\AppointementController.cs" />
     <Compile Include="Controllers\CalenderController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CategoryWSController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\DepartementController.cs" />
     <Compile Include="Controllers\DepartementPatient2Controller.cs" />
@@ -231,10 +232,12 @@
     <Compile Include="Controllers\PatientAppointementController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\PostsWSController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserWSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
