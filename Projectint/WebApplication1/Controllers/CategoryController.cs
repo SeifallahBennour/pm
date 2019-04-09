@@ -119,8 +119,8 @@ namespace WebApplication1.Controllers
 
             CategoryViewModel cvm = new CategoryViewModel();
             cvm.categoryId = cat.categoryId;
-            cvm.categoryname= cat.categoryname;
-         
+            cvm.categoryname = cat.categoryname;
+
 
             return View(cvm);
 

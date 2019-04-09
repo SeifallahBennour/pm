@@ -26,8 +26,8 @@ namespace WebApplication1.Controllers
                 Cvm.posttitre = item.posttitre;
                 Cvm.content = item.content;
                 Cvm.categoriepostId = item.categorypostId;
-                Cvm.categoriename = item.cat.nom;
                 Cvm.post_like = item.post_like;
+                Cvm.datepost = item.datepost;
 
                 List.Add(Cvm);
             }
@@ -49,6 +49,7 @@ namespace WebApplication1.Controllers
                 Tvm.postId = item.postId;
                 // Tvm.cat.nom = item.cat.nom;
                 Tvm.posttitre = item.posttitre;
+                Tvm.datepost = item.datepost;
                 
                 //Tvm.user.firstName = item.user.firstName;
 
@@ -133,9 +134,10 @@ namespace WebApplication1.Controllers
             p.post_like = pvm.post_like;
             p.posttitre = pvm.posttitre;
             p.content = pvm.content;
+            p.datepost = DateTime.Now;
 
-            
-            
+
+
 
             //// p.catgoriepostId = id.categorypostId;
             // p.content = pvm.content;

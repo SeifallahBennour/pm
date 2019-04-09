@@ -86,6 +86,18 @@ namespace WebApplication1.Controllers
                 return View(model);
             }
 
+
+            // Require the user to have a confirmed email before they can log on.
+            var useer = await UserManager.FindByNameAsync(model.Email);
+            if (useer != null)
+            {
+                if (!await UserManager.IsEmailConfirmedAsync(useer.Id))
+                {
+                    ViewBag.errorMessage = "You must have a confirmed email to log on.";
+                    return View("Error");
+                }
+            }
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
@@ -94,17 +106,17 @@ namespace WebApplication1.Controllers
             {
                 case SignInStatus.Success:
                     User user = await UserManager.FindAsync(model.Email, model.Password);
-                    if (user.RoleUser == "Patient")
+                    if (user.RoleUser == "Member")
                     {
-                        return RedirectToAction("HomePatient", "Home");
+                        return RedirectToAction("HomeMembre", "Home");
                     }
-                    if (user.RoleUser == "Doctor")
+                    if (user.RoleUser == "TeamLeader")
                     {
-                        return RedirectToAction("DoctorProfile", "Calender");
+                        return RedirectToAction("HomeTleader", "Home");
                     }
-                    if (user.RoleUser == "Admin")
+                    if (user.RoleUser == "Manager")
                     {
-                        return RedirectToAction("IndexB", "HomeB");
+                        return RedirectToAction("HomeManager", "Home");
                     }
                     return RedirectToLocal(returnUrl);
 
@@ -206,7 +218,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> RegisterTeamLeader(CustomerRegisterTeamLeader model)
+        public async Task<ActionResult> RegisterTeamLeader(CustomerRegisterTeamLeader model,HttpPostedFileBase imagePath)
         {
             if (ModelState.IsValid)
             {
@@ -222,23 +234,34 @@ namespace WebApplication1.Controllers
                     gender = model.gender,
                     Address = model.Address,
                     password2 = model.Password,
+                    imagePath = imagePath.FileName,
                     RoleUser = "TeamLeader"
                 };
 
-                var result = await UserManager.CreateAsync(user, model.Password);
+                   
+            imagePath.SaveAs(System.IO.Path.Combine(Server.MapPath("~/Images/"), imagePath.FileName));
+
+
+
+
+
+
+
+            var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
-                {
-                    //Ouverture Session
-                 //   await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                { 
+                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
 
-                    return RedirectToAction("IndexTL", "User");
+                return RedirectToAction("HomeManager", "Home");
+
+
                 }
                 AddErrors(result);
             }
@@ -257,7 +280,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> RegisterMember(CustomerRegisterMember model)
+        public async Task<ActionResult> RegisterMember(CustomerRegisterMember model, HttpPostedFileBase imagePath)
         {
             if (ModelState.IsValid)
             {
@@ -273,28 +296,37 @@ namespace WebApplication1.Controllers
                     gender = model.gender,
                     Address = model.Address,
                     password2 = model.Password,
+                    imagePath = imagePath.FileName,
                     RoleUser = "Member"
                 };
+
+                
+                   
+            imagePath.SaveAs(System.IO.Path.Combine(Server.MapPath("~/Images/"), imagePath.FileName));
+
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
 
-                    return RedirectToAction("HomePatient", "Home");
+                    return RedirectToAction("HomeManager", "Home");
+
+
+                    
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
-            return RedirectToAction("Home", "Home");
+            return RedirectToAction("RegisterMember", "Account");
         }
 
 
@@ -310,7 +342,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> RegisterManager(CustomerRegisterManager model)
+        public async Task<ActionResult> RegisterManager(CustomerRegisterManager model,HttpPostedFileBase imagePath)
         {
             if (ModelState.IsValid)
             {
@@ -326,19 +358,24 @@ namespace WebApplication1.Controllers
                     gender = model.gender,
                     Address = model.Address,
                     password2 = model.Password,
+                    imagePath = imagePath.FileName,
                     RoleUser = "Manager"
                 };
+                
+                   
+            imagePath.SaveAs(System.IO.Path.Combine(Server.MapPath("~/Images/"), imagePath.FileName));
+
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
 
                     return RedirectToAction("HomePatient", "Home");
