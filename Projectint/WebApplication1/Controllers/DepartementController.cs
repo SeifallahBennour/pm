@@ -25,6 +25,7 @@ namespace WebApplication1.Controllers
         IServiceDoctor MyServiceDoctor = null;
         public DepartementController()
         {
+
             ServiceRDV = new ServiceAppointement();
             MyServiceDoctor = new ServiceDoctor();
             servicereason = new ServiceReason();
